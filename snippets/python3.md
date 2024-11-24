@@ -1,4 +1,4 @@
-# Step 0: Install Node.js
+# Step 0: Install Python 3 and requests module
 Download and install the [Python](https://www.python.org/downloads/), then install the [Requests](https://requests.readthedocs.io/en/latest/) library from python [package manager](https://pypi.org/project/requests/) then you are ready to run the below code snippets.
 
 # Step 1: Requesting resources
@@ -84,7 +84,7 @@ payload = {
 response = requests.post(serviceRoot +"People('lewisblack')/Trips/$ref", json=payload)
 status_code = response.status_code
 
-message, body = ("Success: ", str(response.json())) if status_code == 201 else ("Error: ", response.text)
+message, body = ("Success: ", str(response.json())) if status_code == 204 else ("Error: ", response.text)
 print( message + str(status_code) + "\n" + body)
 ```
 # Step 6: Invoking a function
